@@ -16,3 +16,9 @@
 local.properties
 .env
 debug.keystore
+
+# Do not ignore APK files
+!*.apk
+!my-apps/*.apk
+!app/*.apk
+!app/release/*.apk
