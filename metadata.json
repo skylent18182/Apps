@@ -1,0 +1,6 @@
+{
+  "name": "MinePhone Overlay",
+  "description": "MinePhone Overlay App für Minecraft mit schwebendem Fenster",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
