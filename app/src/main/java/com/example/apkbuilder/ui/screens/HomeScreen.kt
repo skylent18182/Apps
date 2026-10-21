@@ -112,30 +112,32 @@ fun HomeScreen(
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Button(
                             onClick = { zipPickerLauncher.launch(arrayOf("application/zip", "application/x-zip-compressed", "*/*")) },
                             modifier = Modifier.weight(1f),
                             shape = RoundedCornerShape(12.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 10.dp),
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = MaterialTheme.colorScheme.primary,
                                 contentColor = MaterialTheme.colorScheme.onPrimary
                             )
                         ) {
                             Icon(Icons.Default.FolderZip, contentDescription = null, modifier = Modifier.size(18.dp))
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text("ZIP wählen", fontWeight = FontWeight.SemiBold)
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text("ZIP wählen", fontWeight = FontWeight.SemiBold, maxLines = 1, softWrap = false, fontSize = 13.sp)
                         }
 
                         OutlinedButton(
                             onClick = { viewModel.loadSampleProject() },
                             modifier = Modifier.weight(1f),
-                            shape = RoundedCornerShape(12.dp)
+                            shape = RoundedCornerShape(12.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 10.dp)
                         ) {
                             Icon(Icons.Default.AutoFixHigh, contentDescription = null, modifier = Modifier.size(18.dp))
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text("Beispiel-ZIP", fontWeight = FontWeight.SemiBold)
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text("Beispiel laden", fontWeight = FontWeight.SemiBold, maxLines = 1, softWrap = false, fontSize = 13.sp)
                         }
                     }
                 }
@@ -640,12 +642,13 @@ fun BuildSuccessCard(
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(10.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Button(
                     onClick = onInstall,
                     modifier = Modifier.weight(1f),
                     shape = RoundedCornerShape(12.dp),
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 12.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = MaterialTheme.colorScheme.primary,
                         contentColor = MaterialTheme.colorScheme.onPrimary
@@ -653,17 +656,18 @@ fun BuildSuccessCard(
                 ) {
                     Icon(Icons.Default.InstallMobile, contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(modifier = Modifier.width(6.dp))
-                    Text("Installieren", fontWeight = FontWeight.Bold)
+                    Text("Installieren", fontWeight = FontWeight.Bold, maxLines = 1, softWrap = false, fontSize = 13.sp)
                 }
 
                 OutlinedButton(
                     onClick = onShare,
                     modifier = Modifier.weight(1f),
-                    shape = RoundedCornerShape(12.dp)
+                    shape = RoundedCornerShape(12.dp),
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 12.dp)
                 ) {
                     Icon(Icons.Default.Share, contentDescription = null, modifier = Modifier.size(18.dp))
                     Spacer(modifier = Modifier.width(6.dp))
-                    Text("Teilen / Speichern", fontWeight = FontWeight.SemiBold)
+                    Text("Teilen", fontWeight = FontWeight.SemiBold, maxLines = 1, softWrap = false, fontSize = 13.sp)
                 }
             }
 
