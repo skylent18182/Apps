@@ -1,5 +1,5 @@
 {
-  "name": "APK Builder",
+  "name": "Apkbuilderv3",
   "description": "Erstelle Android APKs direkt aus Android-Projekt-ZIP-Dateien mit integrierter Signierung, Manifest-Inspektor und Installer.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
